@@ -8,7 +8,7 @@ var server = http.createServer(function (request, response) {
       '<h1>Home</h1>' +
       '<img src="https://i.imgur.com/jKhQJVH.jpg" alt="Waving hi">'
     )
-  } else if (request.url === '/about') {
+  } else if (request.url === '/random-joke') {
     response.end('<h1>About</h1>')
   } else {
     response.end('<h1>Page Not Found</h1>')

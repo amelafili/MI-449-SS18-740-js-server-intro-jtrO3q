@@ -10,6 +10,8 @@ var server = http.createServer(function (request, response) {
     )
   } else if (request.url === '/random-joke') {
     response.end('<h1>About</h1>')
+  } else if (request.url === '/cuteness') {
+    response.end('<img src="http://www.aws.org.au/wp-content/uploads/2017/04/iStock-619670754.jpg alt="turtles>')
   } else {
     response.end('<h1>Page Not Found</h1>')
   }

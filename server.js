@@ -6,15 +6,17 @@ var server = http.createServer(function (request, response) {
   if (request.url === '/') {
     response.end(
       '<h1>Hello!</h1>' +
-      '<img src="https://i.imgur.com/jKhQJVH.jpg" alt="Greetings">'
+      '<img src="http://sites.google.com/site/mockturtlealumni2/5Loggerhead_Turtle.jpg" alt="Greetings">'
     )
   } else if (request.url === '/random-joke') {
     response.end(
-      '<p>Knock, knock!</p> <p>Who’s there?</p> <p>Opportunity!</p> <p>That is impossible. Opportunity doesn’t come knocking twice!</p>',
-      '<p>Knock, knock!</p> <p>Who’s there?</p> <p>An extraterrestrial</p> <p>Extraterrestrial who?</p> <p></p>',
+      '<h1>Funny Jokes!</h1>' +
+      '<p>Knock, knock!</p> <p>Who’s there?</p> <p>Opportunity!</p> <p>That is impossible. Opportunity doesn’t come knocking twice!</p>' +
+      '<p>Knock, knock!</p> <p>Who’s there?</p> <p>An extraterrestrial</p> <p>Extraterrestrial who?</p> <p></p>' +
       '<p>Knock, knock!</p> <p>Who\'s there?</p> <p>Beats.</p> <p>Beats who?</p> <p>Beats me.</p>')
   } else if (request.url === '/cuteness') {
     response.end(
+      '<h1>Cute turtle!</h1>' +
       '<img src="http://www.aws.org.au/wp-content/uploads/2017/04/iStock-619670754.jpg" alt="turtles>')
   } else {
     response.end('<h1>Page Not Found</h1>' +

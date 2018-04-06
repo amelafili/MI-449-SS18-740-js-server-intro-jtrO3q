@@ -1,25 +1,29 @@
 // Require Node's http module and assign it to a variable
 var http = require('http')
 
-// Create a new server that just says "Hi!!" at every route
+// Create a new server for the joke and cute pages, and page not availavle
 var server = http.createServer(function (request, response) {
   if (request.url === '/') {
     response.end(
-      '<h1>Home</h1>' +
-      '<img src="https://i.imgur.com/jKhQJVH.jpg" alt="Waving hi">'
+      '<h1>Hello!</h1>' +
+      '<img src="https://i.imgur.com/jKhQJVH.jpg" alt="Greetings">'
     )
   } else if (request.url === '/random-joke') {
-    response.end('<h1>About</h1>')
+    response.end(
+      '<p>Knock, knock!</p> <p>Who’s there?</p> <p>Opportunity!</p> <p>That is impossible. Opportunity doesn’t come knocking twice!</p>',
+      '<p>Knock, knock!</p> <p>Who’s there?</p> <p>An extraterrestrial</p> <p>Extraterrestrial who?</p> <p></p>',
+      '<p>Knock, knock!</p> <p>Who\'s there?</p> <p>Beats.</p> <p>Beats who?</p> <p>Beats me.</p>')
   } else if (request.url === '/cuteness') {
     response.end(
       '<img src="http://www.aws.org.au/wp-content/uploads/2017/04/iStock-619670754.jpg" alt="turtles>')
   } else {
-    response.end('<h1>Page Not Found</h1>')
+    response.end('<h1>Page Not Found</h1>' +
+  '<p>The requested URL ' + request.url + ' was not found.</p>')
   }
 })
 
 // Listen on port 8080, so that we can reach the app at
-// localhost:8080
+// localhost:8080 and Heroku
 var port = process.env.PORT || 8080
 
 server.listen(port)

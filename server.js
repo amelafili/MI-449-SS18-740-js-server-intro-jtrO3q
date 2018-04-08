@@ -23,10 +23,6 @@ var server = http.createServer(function (request, response) {
       '<p>Knock, knock!</p> <p>Who\'s there?</p> <p>Beats.</p>' +
       '<p>Beats who?</p> <p>Beats me.</p>')
     }
-    response.end(
-      '<h1>Funny Jokes!</h1>' +
-      '<p>Knock, knock!</p> <p>Who’s there?</p> <p>Opportunity!</p>' +
-      '<p>That is impossible. Opportunity doesn’t come knocking twice!</p>')
   } else if (request.url === '/cuteness') {
     response.end(
       '<h1>Cute turtle!</h1>' +

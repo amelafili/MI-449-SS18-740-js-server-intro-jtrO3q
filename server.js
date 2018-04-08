@@ -17,7 +17,7 @@ var server = http.createServer(function (request, response) {
     } else if (num > 0.66) {
       response.end('<h1>Funny jokes!</h1>' +
       '<p>Knock, knock!</p> <p>Who\'s there?</p> <p>An extraterrestrial</p>' +
-      '<p>Extraterrestrial who?</p> <p></p>')
+      '<p>Extraterrestrial who?</p> <p>What – how many extra-terrestrials do you know?</p>')
     } else {
       response.end('<h1>Funny jokes!</h1>' +
       '<p>Knock, knock!</p> <p>Who\'s there?</p> <p>Beats.</p>' +

@@ -12,11 +12,11 @@ var server = http.createServer(function (request, response) {
     var num = Math.random()
     if (num > 0.33) {
       response.end('<h1>Funny jokes!</h1>' +
-       '<p>Knock, knock!</p> <p>Who’s there?</p> <p>Opportunity!</p> ' +
+       '<p>Knock, knock!</p> <p>Who\'s there?</p> <p>Opportunity!</p> ' +
        '<p>That is impossible. Opportunity doesn’t come knocking twice!</p>')
     } else if (num > 0.66) {
       response.end('<h1>Funny jokes!</h1>' +
-      '<p>Knock, knock!</p> <p>Who’s there?</p> <p>An extraterrestrial</p>' +
+      '<p>Knock, knock!</p> <p>Who\'s there?</p> <p>An extraterrestrial</p>' +
       '<p>Extraterrestrial who?</p> <p></p>')
     } else {
       response.end('<h1>Funny jokes!</h1>' +
